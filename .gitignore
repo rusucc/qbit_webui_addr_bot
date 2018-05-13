@@ -1,0 +1,9 @@
+# Paths
+.idea/
+__pycache__/
+
+# Personal info
+api_key.py
+
+# Tests
+test.py

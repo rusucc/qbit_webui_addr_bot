@@ -14,6 +14,11 @@ def check_connected(destination):
         return False
 
 
+def check_home():
+
+    return 0
+
+
 def none():
     return 'Comando inválido.'
 
@@ -22,7 +27,8 @@ def none():
 def function_selector(text):
     switcher = {
         "ip": grab_ip,
-        "IP": grab_ip
+        "IP": grab_ip,
+        'home': check_home
     }
 
     function_name = switcher.get(text, lambda: none)

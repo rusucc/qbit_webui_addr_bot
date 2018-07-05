@@ -4,6 +4,8 @@ import json
 import requests
 import urllib.parse
 
+# TODO docstrings for each function
+
 URL = "https://api.telegram.org/bot{}/".format(TOKEN)
 
 
@@ -62,7 +64,7 @@ def update_treatment(updates):
         if update["message"]["from"]["id"] == ID:
             try:
                 text = update["message"]["text"]
-                message_to_send = home_functions.function_selector(text)
+                message_to_send = home_functions.function_selector(text.lower())
                 chat = update["message"]["chat"]["id"]
                 send_message(message_to_send, chat)
             except Exception as e:

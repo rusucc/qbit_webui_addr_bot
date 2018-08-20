@@ -61,6 +61,7 @@ def send_message(text, chat_id):
 def update_treatment(updates):
     for update in updates["result"]:
         # Checks if message came from me
+        print(update["message"]["from"]["id"]);
         if update["message"]["from"]["id"] == ID:
             try:
                 text = update["message"]["text"]

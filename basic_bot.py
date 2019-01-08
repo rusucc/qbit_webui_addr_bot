@@ -3,6 +3,7 @@ import home_functions
 import json
 import requests
 import urllib.parse
+from time import sleep
 
 # TODO docstrings for each function
 
@@ -11,9 +12,15 @@ URL = "https://api.telegram.org/bot{}/".format(TOKEN)
 
 # Make request to Telegram servers and returns content from the HTTP GET
 def get_url(url):
-    response = requests.get(url)
-    content = response.content.decode("utf8")
-    return content
+    print(url)
+    try:
+        response = requests.get(url)
+        content = response.content.decode("utf8")
+        return content
+    except requests.exceptions.ConnectionError:
+        print('Connection error! Retrying in 30 secs.')
+        sleep(30)
+        return get_url(url)
 
 
 # Gets content returned from get_url() and parses as a json structure

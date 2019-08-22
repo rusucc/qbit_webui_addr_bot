@@ -68,7 +68,7 @@ def send_message(text, chat_id):
 def update_treatment(updates):
     for update in updates["result"]:
         # Checks if message came from me
-        if update["message"]["from"]["id"] == ID:
+        if update["message"]["from"]["id"] == int(ID):
             try:
                 text = update["message"]["text"]
                 message_to_send = home_functions.function_selector(text.lower())
@@ -79,5 +79,5 @@ def update_treatment(updates):
         # If message is not sent by me replies to chat telling that
         else:
             chat = update["message"]["chat"]["id"]
-            # send_message('Você não é o Danilo =(', chat)
+            send_message('Você não é o Danilo =(', chat)
             send_message('You are not allowed to do that.', chat)

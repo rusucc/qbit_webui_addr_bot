@@ -76,7 +76,7 @@ def update_treatment(updates):
                 send_message(message_to_send, chat)
             except Exception as e:
                 print(e)
-        # If message is not sent by me replies to chat telling that
+        # If message is not sent by my user (checking chat id), replies telling that does not have permission
         else:
             chat = update["message"]["chat"]["id"]
             send_message('Você não é o Danilo =(', chat)

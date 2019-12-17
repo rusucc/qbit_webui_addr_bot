@@ -4,6 +4,7 @@ __pycache__/
 
 # Personal info
 api_key.py
+current_ip.txt
 
 # Tests
 test.py

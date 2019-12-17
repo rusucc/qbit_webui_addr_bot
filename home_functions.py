@@ -58,3 +58,22 @@ def function_selector(text):
     function_name = switcher.get(text, none)
     return_text = function_name()
     return return_text
+
+
+def save_ip_file(ip_addr):
+    ip_file = open('current_ip.txt', 'w+')
+    ip_file.write(ip_addr)
+    ip_file.close()
+
+    return 'IP stored on file.'
+
+
+def read_ip_file():
+    try:
+        ip_file = open('current_ip.txt')
+    except IOError:
+        print('File does not exist')
+        return 0
+    ip = ip_file.read()
+
+    return ip

@@ -1,4 +1,5 @@
 import urllib.request
+import urllib.error
 from ping3 import ping
 
 
@@ -17,8 +18,8 @@ def grab_ip():
     """
     try:
         external_ip = urllib.request.urlopen('http://ident.me').read().decode('utf8')
-    except:  # TODO specify exception
-        external_ip = 'Error. Webservice unavailable. :('
+    except urllib.error.URLError:
+        external_ip = 'Error. Either connection is down or webservice http://ident.met is offline.'
     return external_ip
 
 

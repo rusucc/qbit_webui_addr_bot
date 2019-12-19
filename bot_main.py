@@ -19,6 +19,8 @@ def main():
             update_treatment(updates)
 
         seconds_timer = seconds_timer + 3
+        
+        # When timer counter gets to 10 min, check IP again to see if changed
         if seconds_timer >= 600:
             current_ip = home_functions.grab_ip()
             if 'Error' not in current_ip:

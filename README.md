@@ -9,6 +9,8 @@ This script is always executed on my Raspbian at boot-up and keeps running, and 
 
 I will probably add more functionalities as I see fit, but for now it only tells me my IP.  
 
+When executed the python main sends with the Telegram bot a message containing the current IP, and every 10 min it registers it again and check if it has changed, if so, it sends another message with the new IP address.
+
 
 ### Commands that should be sent as Telegram messages
 

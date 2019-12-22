@@ -45,6 +45,7 @@ def check_home():
 
 
 def none():
+    # Error message for case switch structure
     return 'Comando inválido.'
 
 

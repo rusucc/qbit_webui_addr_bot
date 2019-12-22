@@ -9,8 +9,7 @@ def main():
     current_ip = home_functions.grab_ip()
     home_functions.save_ip_file(current_ip)
 
-    send_message('Starting BOT script. Home current IP address:', ID)
-    send_message(current_ip, ID)
+    start_up_message(current_ip)  # Send current IP
 
     # Start timer, this is gonna be used to check current again every 10 min
     seconds_timer = 0

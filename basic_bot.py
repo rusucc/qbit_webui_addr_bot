@@ -81,3 +81,10 @@ def update_treatment(updates):
             chat = update["message"]["chat"]["id"]
             send_message('Você não é o Danilo =(', chat)
             send_message('You are not allowed to do that.', chat)
+
+
+def start_up_message(current_ip):
+    send_message('Starting BOT script. Home current IP address:', ID)
+    send_message(current_ip, ID)
+
+    return 'ok'

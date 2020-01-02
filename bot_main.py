@@ -4,6 +4,8 @@ import time
 
 # Keeps script running and getting new updates
 def main():
+    # At start sleep for 20 seconds to wait for system to connect to network
+    sleep(20)
 
     # Generate IP file and send to my chat
     current_ip = home_functions.grab_ip()

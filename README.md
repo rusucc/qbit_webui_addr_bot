@@ -1,10 +1,10 @@
 # qBitTorrent Web UI address BOT
 
-This is #here#'s excellent script of sending ip adresses over Telegram, modified to send qBitTorrent's remote address in IPv4 with the port number, so phone users can tap once and access their home server.
+This is dkage's excellent script of sending ip adresses over Telegram, modified to send qBitTorrent's remote address in IPv4 with the port number, so phone users can tap once and access their home server.
 
 ### Commands that should be sent as Telegram messages
 
-```ip``` --- bot answers with it's external IP
+```ip``` --- bot answers with it's external IP and Port
 
 
 ## api_key.py

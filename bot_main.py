@@ -36,7 +36,7 @@ def main():
             if 'Error' not in current_ip:
                 if home_functions.grab_ip() != home_functions.read_ip_file():
                     home_functions.save_ip_file(current_ip)
-                    send_message('Your home IP has changed. Sending current IP', ID)
+                    send_message('Your IP has changed. Sending current IP', ID)
                     send_message(current_ip, ID)
             else:
                 send_message('An error occurred during IP grabbing', ID)

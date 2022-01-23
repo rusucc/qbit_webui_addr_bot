@@ -1,4 +1,4 @@
-from api_key import TOKEN, ID
+from api_key import TOKEN, ID, PORT
 import home_functions
 import json
 import requests
@@ -84,7 +84,7 @@ def update_treatment(updates):
 
 
 def start_up_message(current_ip):
-    send_message('Starting BOT script. Home current IP address:', ID)
-    send_message(current_ip, ID)
+    send_message('Starting BOT script. qBittorrent web UI addres is:', ID)
+    send_message(current_ip+':'+str(PORT), ID)
 
     return 'ok'

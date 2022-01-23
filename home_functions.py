@@ -17,7 +17,7 @@ def grab_ip():
         Service not running: Raises an exception.
     """
     try:
-        external_ip = urllib.request.urlopen('http://ident.me').read().decode('utf8')
+        external_ip = urllib.request.urlopen('http://v4.ident.me').read().decode('utf8')
     except urllib.error.URLError:
         external_ip = "Error. Either connection is down or webservice 'http://ident.me' is offline."
     return external_ip

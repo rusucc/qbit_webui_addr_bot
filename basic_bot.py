@@ -68,7 +68,8 @@ def send_message(text, chat_id):
 def update_treatment(updates):
     for update in updates["result"]:
         # Checks if message came from me
-        if update["message"]["from"]["id"] == int(ID):
+        print(int(ID))
+        if update["my_chat_member"]["from"]["id"] == int(ID):
             try:
                 text = update["message"]["text"]
                 message_to_send = home_functions.function_selector(text.lower())
